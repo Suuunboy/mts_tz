@@ -97,9 +97,9 @@ def query(db_path, query_str):
 file_path = 'transactions.xlsx'
 db_path = 'transactions.db'
 
-# data = extract_data(file_path)
-# transformed_data = transform_data(data)
-# load_data(transformed_data, db_path)
+data = extract_data(file_path)
+transformed_data = transform_data(data)
+load_data(transformed_data, db_path)
 
 query_str = """
     SELECT year, month, COUNT(DISTINCT user_id) AS unique_users
